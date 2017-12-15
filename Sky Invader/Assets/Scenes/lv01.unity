@@ -583,8 +583,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350043c980d1e58438f5ff73279d3520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  JumpHeight: 10
+  moveSpeed: 12
+  JumpHeight: 15
   GroundCheck: {fileID: 563928903}
   groundCheckRadius: 0.1
   whatIsGround:
@@ -806,7 +806,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 563928902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.679, z: 0}
+  m_LocalPosition: {x: 0, y: -0.732, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 477246239}

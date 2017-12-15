@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour {
 	public Transform firePoint;
 	public GameObject fireBall;
 
+	private float moveVelocity;
+
 
 
 
@@ -54,6 +56,7 @@ public class PlayerController : MonoBehaviour {
 
 
 		}
+	
 
 		// Tarkistetaan voidaanko hypätä uudelleen
 		if (Input.GetKeyDown (KeyCode.Space) && !grounded && !doubleJumped) {
@@ -63,18 +66,22 @@ public class PlayerController : MonoBehaviour {
 			doubleJumped = true;
 
 		}
+		//Ennen painikkeiden painamista, nopeus = 0
+		moveVelocity = 0;
 
 		if (Input.GetKey (KeyCode.D)) {
 			// liike oikealle
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
-
+			//GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
+			moveVelocity = moveSpeed;
 		}
 
 		if (Input.GetKey (KeyCode.A)) {
 			// liike oikealle
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
-
+			//GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
+			moveVelocity = -moveSpeed;
 		}
+
+		GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveVelocity, GetComponent<Rigidbody2D> ().velocity.y);
 
 	
 
