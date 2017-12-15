@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour {
 	private bool doubleJumped;
 
 
+	//Laukasukohta ja ammus
+	public Transform firePoint;
+	public GameObject fireBall;
+
 
 
 
@@ -27,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 		grounded = Physics2D.OverlapCircle (GroundCheck.position, groundCheckRadius, whatIsGround);
 		//Debug.Log ("grounded = " + grounded);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
@@ -38,7 +42,8 @@ public class PlayerController : MonoBehaviour {
 			//ollaan maassa, estetään tuplahyppy
 			doubleJumped = false;
 		}
-			
+
+
 
 		// Tarkistetaan voidaanko hypätä
 		if (Input.GetKeyDown (KeyCode.Space) && grounded ) {
@@ -71,7 +76,7 @@ public class PlayerController : MonoBehaviour {
 
 		}
 
-
+	
 
 		//käännetään pelihahmo sen transformin avulla
 		if(GetComponent<Rigidbody2D>().velocity.x > 0){
@@ -84,10 +89,16 @@ public class PlayerController : MonoBehaviour {
 			//Suunta on vasemmalle
 			transform.localScale = new Vector3(-1f,1f,1f);
 		}
-			
+
+		//Ampuminen. Painettiinko return painiketta?
+		if (Input.GetKey (KeyCode.Return)) {
+
+			//Return.painiketta painettu, joten laukaistaan ammus (prefabs-kansiosta)
+			Instantiate(fireBall, firePoint.position, firePoint.rotation);
+		}
 	}
 
 	void Jump(){
-			GetComponent <Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
+		GetComponent <Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
 	}
 }
