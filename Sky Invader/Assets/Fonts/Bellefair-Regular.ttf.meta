@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 16f55211a8330fa49b8a83d7f7f5aae1
+timeCreated: 1515744572
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Bellefair
+  fontNames:
+  - Bellefair
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
