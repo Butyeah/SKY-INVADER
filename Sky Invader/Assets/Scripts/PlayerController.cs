@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 
 		// grounded = true, kun ollaan maassa ja false kun ei olla maassa
 		grounded = Physics2D.OverlapCircle (GroundCheck.position, groundCheckRadius, whatIsGround);
-		//Debug.Log ("grounded = " + grounded);
+		Debug.Log ("grounded = " + grounded);
 	}
 
 	// Update is called once per frame
