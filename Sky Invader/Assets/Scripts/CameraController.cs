@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour {
 	public float tileSpeedZ;
 
 	private PlayerController playerController;
-	private bool hasPlayerMoved;
+	private bool hasPlayerMoved = false;
 
 	private Vector3 startPosition;
 
@@ -21,8 +21,8 @@ void Start () {
 // Update is called once per frame
 void Update () {
 
-		if (playerController.grounded == true) {
-			bool hasPlayerMoved = true;
+		if (playerController.grounded == false) {
+			hasPlayerMoved = true;
 		}
 
 		if (hasPlayerMoved == true) {
