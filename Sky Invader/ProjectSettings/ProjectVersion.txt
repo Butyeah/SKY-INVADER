@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 m_EditorVersion: 2017.3.0f3
 =======
 m_EditorVersion: 2017.1.0f3
 >>>>>>> parent of 12e935d... ???
+=======
+m_EditorVersion: 2017.2.0f3
+>>>>>>> parent of 17ffbac... Merge branch 'master' of https://github.com/Butyeah/SKY-INVADER
 =======
 m_EditorVersion: 2017.2.0f3
 >>>>>>> parent of 17ffbac... Merge branch 'master' of https://github.com/Butyeah/SKY-INVADER
